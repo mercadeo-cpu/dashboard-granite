@@ -1256,7 +1256,7 @@ function renderPeriods(){
       const u=allPS.filter(r=>r.period===l&&r.product===p&&r.variant===vr&&flt(r)).reduce((s,r)=>s+r.units,0);
       const hi=l===sel;
       let tr2='';
-      if(prev!==null&&prev>0){const d=Math.round((u-prev)/prev*100);if(d>5)tr2=` <span class="up">▲${d}%</span>`;else if(d<-5)tr2=` <span class="dn">▼${Math.abs(d)}%</span>`;}
+      if(prev!==null&&prev>0){const d=Math.round((u-prev)/prev*100);if(d>0)tr2=` <span class="up">▲${d}%</span>`;else if(d<0)tr2=` <span class="dn">▼${Math.abs(d)}%</span>`;else tr2=` <span style="color:var(--text3);font-size:10px;">0%</span>`;}
       row+=`<td style="text-align:right;font-size:12px;${hi?'background:rgba(204,31,31,0.12);font-weight:600;':''}">${u>0?fN(u)+tr2:'<span style="color:var(--text3)">—</span>'}</td>`;
       if(u>0) prev=u;
     });
