@@ -857,7 +857,7 @@ const priceChanges=[
 ];
 
 const PLbls=["Jan 10", "Jan 17", "Jan 24", "Feb 3", "Feb 10", "Feb 17", "Feb 24", "Mar 3", "Mar 10", "Mar 17", "Mar 24", "Mar 31", "Apr 7", "Apr 13", "Apr 19", "Apr 26", "May 2", "May 9", "May 16", "May 23", "May 30", "Jun 7", "Jun 14", "Jun 21", "Jun 28", "Jul 4", "Jul 11", "Jul 18"];
-const normV=v=>(v==='Default Title'||v==='Single')?'Unflavored':v;
+const normV=v=>(v==='Default Title'||v==='Single')?'Unflavored':(v==='Rich Chocolate'?'Chocolate':v);
 function ps(l,rows){return rows.map(r=>({'period':l,'platform':r[0],'product':r[1],'variant':normV(r[2]),'units':r[3],'sales':r[4]}));}
 Object.values(monthlyData).forEach(a=>a.forEach(r=>{r.variant=normV(r.variant);}));
 
@@ -1184,6 +1184,7 @@ function renderSummary(){
 let cTrend=null,cVel=null;
 function getPrevPeriod(l){const i=PLbls.indexOf(l);return i>0?PLbls[i-1]:null;}
 
+const periodRanges={"Jan 10":"Jan 10–Feb 10","Jan 17":"Jan 17–Feb 17","Jan 24":"Jan 24–Feb 24","Feb 3":"Feb 3–Mar 3","Feb 10":"Feb 10–Mar 10","Feb 17":"Feb 17–Mar 17","Feb 24":"Feb 24–Mar 24","Mar 3":"Mar 3–Apr 3","Mar 10":"Mar 10–Apr 10","Mar 17":"Mar 17–Apr 17","Mar 24":"Mar 24–Apr 24","Mar 31":"Mar 31–Apr 30","Apr 7":"Apr 7–May 7","Apr 13":"Apr 13–May 13","Apr 19":"Apr 19–May 19","Apr 26":"Apr 26–May 26","May 2":"May 2–Jun 2","May 9":"May 9–Jun 9","May 16":"May 16–Jun 16","May 23":"May 23–Jun 23","May 30":"May 30–Jun 30","Jun 7":"Jun 7–Jul 7","Jun 14":"Jun 14–Jul 14","Jun 21":"Jun 21–Jul 21","Jun 28":"Jun 28–Jul 28","Jul 4":"Jul 4–Aug 4","Jul 11":"Jul 11–Aug 11","Jul 18":"Jul 18–Aug 18"};
 function renderPeriods(){
   const sel=document.getElementById('f-30d').value;
   const plat=document.getElementById('f-30d-plat').value;
@@ -1240,7 +1241,7 @@ function renderPeriods(){
   // Table — show only the 8 most recent periods for readability
   const tblPeriods=PLbls.slice(-8);
   // Full date range labels for each period label
-  const periodRanges={"Jan 10":"Jan 10–Feb 10","Jan 17":"Jan 17–Feb 17","Jan 24":"Jan 24–Feb 24","Feb 3":"Feb 3–Mar 3","Feb 10":"Feb 10–Mar 10","Feb 17":"Feb 17–Mar 17","Feb 24":"Feb 24–Mar 24","Mar 3":"Mar 3–Apr 3","Mar 10":"Mar 10–Apr 10","Mar 17":"Mar 17–Apr 17","Mar 24":"Mar 24–Apr 24","Mar 31":"Mar 31–Apr 30","Apr 7":"Apr 7–May 7","Apr 13":"Apr 13–May 13","Apr 19":"Apr 19–May 19","Apr 26":"Apr 26–May 26","May 2":"May 2–Jun 2","May 9":"May 9–Jun 9","May 16":"May 16–Jun 16","May 23":"May 23–Jun 23","May 30":"May 30–Jun 30","Jun 7":"Jun 7–Jul 7","Jun 14":"Jun 14–Jul 14","Jun 21":"Jun 21–Jul 21","Jun 28":"Jun 28–Jul 28","Jul 4":"Jul 4–Aug 4","Jul 11":"Jul 11–Aug 11","Jul 18":"Jul 18–Aug 18"};
+  // periodRanges declared at module scope (hoisted to avoid TDZ)
   const tp=[...new Set(allPS.filter(flt).map(r=>r.product+'|'+r.variant))].slice(0,35);
   document.getElementById('pt-head').innerHTML='<th>SKU</th>'+tblPeriods.map(l=>{const hi=l===sel;const rng=periodRanges[l]||l;const [s,e]=rng.split('–');return`<th style="text-align:right;white-space:nowrap;${hi?'color:#ff8080;font-weight:700;':''}" title="${rng}">${s}<br><span style="font-size:9px;font-weight:400;color:${hi?'#ff6060':'var(--text3)'}">–${e||''}</span></th>`;}).join('');
   const ptb=document.getElementById('pt-body');ptb.innerHTML='';
