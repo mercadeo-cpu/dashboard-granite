@@ -89,7 +89,7 @@
     <button onclick="showPage('periods',this)">30-Day Analysis</button>
     <button onclick="showPage('insights',this)">Product Insights</button>
   </nav>
-  <div class="header-date">August 11, 2026</div>
+  <div class="header-date">August 18, 2026</div>
 </div>
 
 <!-- PAGE 1 -->
@@ -171,6 +171,7 @@
     <span class="fl">Period</span>
         <select id="f-30d" onchange="renderPeriods()">
       <option value="all">All Periods (trend view)</option>
+      <option value="Jul 18">Jul 18 – Aug 18</option>
       <option value="Jul 11">Jul 11 – Aug 11</option>
       <option value="Jul 4">Jul 4 – Aug 4</option>
       <option value="Jun 28">Jun 28 – Jul 28</option>
@@ -248,7 +249,7 @@
   </div>
   <div class="card" style="margin-bottom:18px;">
     <div class="ct">Inventory vs. Sales Velocity — All SKUs</div>
-    <div class="cs">Based on Jul 4–Aug 4 &amp; Jul 11–Aug 11 rolling periods &nbsp;·&nbsp; Inventory snapshot: August 1, 2026 &nbsp;·&nbsp; Sales data through August 11, 2026 &nbsp;·&nbsp; ★ = price change Apr 1, 2026</div>
+    <div class="cs">Based on Jul 11–Aug 11 &amp; Jul 18–Aug 18 rolling periods &nbsp;·&nbsp; Inventory snapshot: August 1, 2026 &nbsp;·&nbsp; Sales data through August 18, 2026 &nbsp;·&nbsp; ★ = price change Apr 1, 2026</div>
     <div style="overflow-x:auto;"><table>
       <thead><tr>
         <th>SKU</th><th style="text-align:right">Midwest</th><th style="text-align:right">Amazon</th><th style="text-align:right">Total</th>
@@ -264,64 +265,68 @@
 <script>
 const monthlyData={
 "2026-08":[
-  {month:"2026-08",vendor:"Amazon",product:"Recovery",variant:"Fruit Blast",units:63,sales:3780,cost:17.77,totalCost:1119.51,profit:2660.49},
+  {month:"2026-08",vendor:"Amazon",product:"Recovery",variant:"Fruit Blast",units:102,sales:6120.0,cost:17.77,totalCost:1812.54,profit:4307.46},
   {month:"2026-08",vendor:"Amazon",product:"Protein Powder",variant:"Vanilla Ice Cream",units:65,sales:3574.35,cost:17.55,totalCost:1140.75,profit:2433.6},
-  {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Strawberry Lemonade",units:53,sales:2119.47,cost:12.76,totalCost:676.28,profit:1443.19},
-  {month:"2026-08",vendor:"Amazon",product:"HBCD Powder",variant:"Unflavored",units:46,sales:1379.54,cost:9.53,totalCost:438.38,profit:941.16},
+  {month:"2026-08",vendor:"Amazon",product:"HBCD Powder",variant:"Unflavored",units:53,sales:2119.47,cost:9.53,totalCost:505.09,profit:1614.38},
+  {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Strawberry Lemonade",units:46,sales:1379.54,cost:12.76,totalCost:586.96,profit:792.58},
   {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Orange Creamsicle",units:41,sales:1147.59,cost:12.76,totalCost:523.16,profit:624.43},
-  {month:"2026-08",vendor:"Amazon",product:"Intra-Carb",variant:"Unflavored",units:36,sales:863.64,cost:10.42,totalCost:375.12,profit:488.52},
-  {month:"2026-08",vendor:"Amazon",product:"Protein Powder",variant:"Salted Caramel",units:26,sales:1374.75,cost:17.55,totalCost:456.3,profit:918.45},
-  {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Fruit Punch",units:26,sales:1039.74,cost:12.76,totalCost:331.76,profit:707.98},
-  {month:"2026-08",vendor:"Amazon",product:"Multi Collagen Peptides",variant:"Unflavored",units:27,sales:1079.73,cost:12.75,totalCost:344.25,profit:735.48},
-  {month:"2026-08",vendor:"Amazon",product:"GX Pre-Workout",variant:"Sour Power",units:30,sales:599.7,cost:18.86,totalCost:565.8,profit:33.9},
+  {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Fruit Punch",units:36,sales:863.64,cost:12.76,totalCost:459.36,profit:404.28},
+  {month:"2026-08",vendor:"Amazon",product:"Intra-Carb",variant:"Unflavored",units:26,sales:1374.75,cost:10.42,totalCost:270.92,profit:1103.83},
+  {month:"2026-08",vendor:"Amazon",product:"Multi Collagen Peptides",variant:"Unflavored",units:26,sales:1039.74,cost:12.75,totalCost:331.5,profit:708.24},
+  {month:"2026-08",vendor:"Amazon",product:"Protein Powder",variant:"Salted Caramel",units:27,sales:1079.73,cost:17.55,totalCost:473.85,profit:605.88},
+  {month:"2026-08",vendor:"Amazon",product:"Creatine Monohydrate",variant:"Unflavored",units:30,sales:599.7,cost:10.28,totalCost:308.4,profit:291.3},
   {month:"2026-08",vendor:"Amazon",product:"Essential Aminos",variant:"Green Apple",units:22,sales:879.78,cost:12.76,totalCost:280.72,profit:599.06},
-  {month:"2026-08",vendor:"Amazon",product:"Creatine Monohydrate",variant:"Unflavored",units:22,sales:483.78,cost:10.28,totalCost:226.16,profit:257.62},
-  {month:"2026-08",vendor:"Amazon",product:"Intra-Carb",variant:"Fruit Punch",units:22,sales:659.78,cost:10.42,totalCost:229.24,profit:430.54},
-  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Chocolate",units:20,sales:999.8,cost:17.94,totalCost:358.8,profit:641},
+  {month:"2026-08",vendor:"Amazon",product:"Intra-Carb",variant:"Fruit Punch",units:22,sales:483.78,cost:10.42,totalCost:229.24,profit:254.54},
+  {month:"2026-08",vendor:"Amazon",product:"GX Pre-Workout",variant:"Sour Power",units:22,sales:659.78,cost:18.86,totalCost:414.92,profit:244.86},
+  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Chocolate",units:20,sales:999.8,cost:17.94,totalCost:358.8,profit:641.0},
   {month:"2026-08",vendor:"Amazon",product:"Pristine Omega",variant:"Unflavored",units:19,sales:417.81,cost:5.11,totalCost:97.09,profit:320.72},
-  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Vanilla Ice Cream",units:12,sales:599.88,cost:17.94,totalCost:215.28,profit:384.6},
+  {month:"2026-08",vendor:"Amazon",product:"Vaso Blast",variant:"Blood Orange",units:12,sales:599.88,cost:13.75,totalCost:165.0,profit:434.88},
   {month:"2026-08",vendor:"Amazon",product:"Vaso Blast",variant:"Cherry Lime",units:11,sales:494.89,cost:13.75,totalCost:151.25,profit:343.64},
-  {month:"2026-08",vendor:"Amazon",product:"Joint Care",variant:"Unflavored",units:13,sales:779.87,cost:13.28,totalCost:172.64,profit:607.23},
-  {month:"2026-08",vendor:"Amazon",product:"Vaso Blast",variant:"Blood Orange",units:10,sales:449.9,cost:13.75,totalCost:137.5,profit:312.4},
-  {month:"2026-08",vendor:"Amazon",product:"Vital Shield",variant:"Very Berry Greens",units:9,sales:179.91,cost:17.95,totalCost:161.55,profit:18.36},
-  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"Blood Orange",units:8,sales:119.92,cost:12,totalCost:96,profit:23.92},
-  {month:"2026-08",vendor:"Amazon",product:"Thermo Burn+",variant:"Unflavored",units:8,sales:79.92,cost:17.29,totalCost:138.32,profit:-58.4},
-  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Fresh Strawberry",units:7,sales:349.93,cost:17.94,totalCost:125.58,profit:224.35},
-  {month:"2026-08",vendor:"Amazon",product:"L-Glutamine",variant:"Unflavored",units:5,sales:84.95,cost:9.98,totalCost:49.9,profit:35.05},
+  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Vanilla Ice Cream",units:13,sales:779.87,cost:17.94,totalCost:233.22,profit:546.65},
+  {month:"2026-08",vendor:"Amazon",product:"Joint Care",variant:"Unflavored",units:10,sales:449.9,cost:13.28,totalCost:132.8,profit:317.1},
+  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Fresh Strawberry",units:9,sales:179.91,cost:17.94,totalCost:161.46,profit:18.45},
+  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"Blood Orange",units:8,sales:119.92,cost:12.0,totalCost:96.0,profit:23.92},
+  {month:"2026-08",vendor:"Amazon",product:"Vital Shield",variant:"Very Berry Greens",units:8,sales:79.92,cost:17.95,totalCost:143.6,profit:-63.68},
+  {month:"2026-08",vendor:"Amazon",product:"L-Glutamine",variant:"Unflavored",units:7,sales:349.93,cost:9.98,totalCost:69.86,profit:280.07},
+  {month:"2026-08",vendor:"Amazon",product:"Thermo Burn+",variant:"Unflavored",units:5,sales:84.95,cost:17.29,totalCost:86.45,profit:-1.5},
   {month:"2026-08",vendor:"Amazon",product:"Vital Shield",variant:"Lemon Lime Greens",units:5,sales:99.95,cost:17.95,totalCost:89.75,profit:10.2},
-  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"White Peach",units:6,sales:89.94,cost:12,totalCost:72,profit:17.94},
-  {month:"2026-08",vendor:"Amazon",product:"Protein Powder",variant:"Blueberry Muffin",units:3,sales:164.97,cost:17.55,totalCost:52.65,profit:112.32},
-  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Cinnamon Cereal",units:3,sales:149.97,cost:17.94,totalCost:53.82,profit:96.15},
-  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"Blue Crush",units:3,sales:44.97,cost:12,totalCost:36,profit:8.97},
-  {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Vanilla Ice Cream",units:22,sales:1110.78,cost:17.55,totalCost:386.1,profit:724.68},
-  {month:"2026-08",vendor:"Shopify",product:"Recovery",variant:"Fruit Blast",units:16,sales:840,cost:17.77,totalCost:284.32,profit:555.68},
-  {month:"2026-08",vendor:"Shopify",product:"Recovery",variant:"Rainbow Candy",units:13,sales:707.87,cost:17.77,totalCost:231.01,profit:476.86},
-  {month:"2026-08",vendor:"Shopify",product:"Vaso Blast",variant:"Cherry Lime",units:14,sales:519.86,cost:13.75,totalCost:192.5,profit:327.36},
-  {month:"2026-08",vendor:"Shopify",product:"Multi Collagen Peptides",variant:"Unflavored",units:14,sales:511.86,cost:12.75,totalCost:178.5,profit:333.36},
-  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Fruit Punch",units:10,sales:396.99,cost:12.76,totalCost:127.6,profit:269.39},
-  {month:"2026-08",vendor:"Shopify",product:"Vaso Blast",variant:"Blood Orange",units:9,sales:345.91,cost:13.75,totalCost:123.75,profit:222.16},
-  {month:"2026-08",vendor:"Shopify",product:"Joint Care",variant:"Unflavored",units:10,sales:351.9,cost:13.28,totalCost:132.8,profit:219.1},
-  {month:"2026-08",vendor:"Shopify",product:"GX Pre-Workout",variant:"Sour Power",units:17,sales:312.64,cost:18.86,totalCost:320.62,profit:-7.98},
-  {month:"2026-08",vendor:"Shopify",product:"Creatine Monohydrate",variant:"Unflavored",units:15,sales:343.03,cost:10.28,totalCost:154.2,profit:188.83},
-  {month:"2026-08",vendor:"Shopify",product:"Pristine Omega",variant:"Unflavored",units:25,sales:232.74,cost:5.11,totalCost:127.75,profit:104.99},
-  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Chocolate",units:5,sales:219.95,cost:17.94,totalCost:89.7,profit:130.25},
-  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Strawberry Lemonade",units:6,sales:197.54,cost:12.76,totalCost:76.56,profit:120.98},
-  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Orange Creamsicle",units:7,sales:186.84,cost:12.76,totalCost:89.32,profit:97.52},
-  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Cinnamon Cereal",units:4,sales:179.96,cost:17.94,totalCost:71.76,profit:108.2},
-  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Vanilla Ice Cream",units:4,sales:414.9,cost:17.94,totalCost:71.76,profit:343.14},
-  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Green Apple",units:6,sales:152.54,cost:12.76,totalCost:76.56,profit:75.98},
-  {month:"2026-08",vendor:"Shopify",product:"Intra-Carb",variant:"Fruit Punch",units:5,sales:143.95,cost:10.42,totalCost:52.1,profit:91.85},
-  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Fresh Strawberry",units:3,sales:140.92,cost:17.94,totalCost:53.82,profit:87.1},
-  {month:"2026-08",vendor:"Shopify",product:"L-Glutamine",variant:"Unflavored",units:7,sales:108.73,cost:9.98,totalCost:69.86,profit:38.87},
-  {month:"2026-08",vendor:"Shopify",product:"HBCD Powder",variant:"Unflavored",units:3,sales:83.97,cost:9.53,totalCost:28.59,profit:55.38},
-  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"White Peach",units:5,sales:68.95,cost:12,totalCost:60,profit:8.95},
+  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"White Peach",units:6,sales:89.94,cost:12.0,totalCost:72.0,profit:17.94},
+  {month:"2026-08",vendor:"Amazon",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Cinnamon Cereal",units:3,sales:164.97,cost:17.94,totalCost:53.82,profit:111.15},
+  {month:"2026-08",vendor:"Amazon",product:"GigaBrain",variant:"Blue Crush",units:3,sales:149.97,cost:12.0,totalCost:36.0,profit:113.97},
+  {month:"2026-08",vendor:"Amazon",product:"Protein Powder",variant:"Blueberry Muffin",units:3,sales:44.97,cost:17.55,totalCost:52.65,profit:-7.68},
+  {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Vanilla Ice Cream",units:29,sales:1429.71,cost:17.55,totalCost:508.95,profit:920.76},
+  {month:"2026-08",vendor:"Shopify",product:"Recovery",variant:"Fruit Blast",units:25,sales:1278.0,cost:17.77,totalCost:444.25,profit:833.75},
+  {month:"2026-08",vendor:"Shopify",product:"Recovery",variant:"Rainbow Candy",units:22,sales:1196.78,cost:17.77,totalCost:390.94,profit:805.84},
+  {month:"2026-08",vendor:"Shopify",product:"Vaso Blast",variant:"Cherry Lime",units:23,sales:863.77,cost:13.75,totalCost:316.25,profit:547.52},
+  {month:"2026-08",vendor:"Shopify",product:"Multi Collagen Peptides",variant:"Unflavored",units:17,sales:607.83,cost:12.75,totalCost:216.75,profit:391.08},
+  {month:"2026-08",vendor:"Shopify",product:"Vaso Blast",variant:"Blood Orange",units:15,sales:553.85,cost:13.75,totalCost:206.25,profit:347.6},
+  {month:"2026-08",vendor:"Shopify",product:"Joint Care",variant:"Unflavored",units:16,sales:555.84,cost:13.28,totalCost:212.48,profit:343.36},
+  {month:"2026-08",vendor:"Shopify",product:"Pristine Omega",variant:"Unflavored",units:55,sales:507.44,cost:5.11,totalCost:281.05,profit:226.39},
+  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Fruit Punch",units:14,sales:526.15,cost:12.76,totalCost:178.64,profit:347.51},
+  {month:"2026-08",vendor:"Shopify",product:"Creatine Monohydrate",variant:"Unflavored",units:24,sales:529.94,cost:10.28,totalCost:246.72,profit:283.22},
+  {month:"2026-08",vendor:"Shopify",product:"GX Pre-Workout",variant:"Sour Power",units:26,sales:481.55,cost:18.86,totalCost:490.36,profit:-8.81},
+  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Orange Creamsicle",units:14,sales:360.37,cost:12.76,totalCost:178.64,profit:181.73},
+  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Chocolate",units:8,sales:349.92,cost:17.94,totalCost:143.52,profit:206.4},
+  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Vanilla Ice Cream",units:8,sales:574.86,cost:17.94,totalCost:143.52,profit:431.34},
+  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Green Apple",units:13,sales:338.67,cost:12.76,totalCost:165.88,profit:172.79},
+  {month:"2026-08",vendor:"Shopify",product:"Essential Aminos",variant:"Strawberry Lemonade",units:9,sales:296.31,cost:12.76,totalCost:114.84,profit:181.47},
+  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Fresh Strawberry",units:7,sales:330.88,cost:17.94,totalCost:125.58,profit:205.3},
+  {month:"2026-08",vendor:"Shopify",product:"Intra-Carb",variant:"Fruit Punch",units:9,sales:247.41,cost:10.42,totalCost:93.78,profit:153.63},
+  {month:"2026-08",vendor:"Shopify",product:"The Meadows Whey: Premium Whey Isolate Protein",variant:"Cinnamon Cereal",units:5,sales:219.95,cost:17.94,totalCost:89.7,profit:130.25},
+  {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Salted Caramel",units:3,sales:142.97,cost:17.55,totalCost:52.65,profit:90.32},
+  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"White Peach",units:9,sales:128.91,cost:12.0,totalCost:108.0,profit:20.91},
+  {month:"2026-08",vendor:"Shopify",product:"L-Glutamine",variant:"Unflavored",units:8,sales:122.32,cost:9.98,totalCost:79.84,profit:42.48},
+  {month:"2026-08",vendor:"Shopify",product:"HBCD Powder",variant:"Unflavored",units:4,sales:113.96,cost:9.53,totalCost:38.12,profit:75.84},
+  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"Blood Orange",units:8,sales:108.67,cost:12.0,totalCost:96.0,profit:12.67},
+  {month:"2026-08",vendor:"Shopify",product:"Intra-Carb",variant:"Unflavored",units:3,sales:67.17,cost:10.42,totalCost:31.26,profit:35.91},
+  {month:"2026-08",vendor:"Shopify",product:"Thermo Burn+",variant:"Unflavored",units:7,sales:66.43,cost:17.29,totalCost:121.03,profit:-54.6},
   {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Blueberry Muffin",units:1,sales:87.98,cost:17.55,totalCost:17.55,profit:70.43},
-  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"Blood Orange",units:4,sales:51.71,cost:12,totalCost:48,profit:3.71},
-  {month:"2026-08",vendor:"Shopify",product:"Intra-Carb",variant:"Unflavored",units:2,sales:47.98,cost:10.42,totalCost:20.84,profit:27.14},
-  {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Salted Caramel",units:1,sales:43.99,cost:17.55,totalCost:17.55,profit:26.44},
-  {month:"2026-08",vendor:"Shopify",product:"Thermo Burn+",variant:"Unflavored",units:4,sales:38.46,cost:17.29,totalCost:69.16,profit:-30.7},
-  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"Blue Crush",units:2,sales:24.73,cost:12,totalCost:24,profit:0.73},
-  {month:"2026-08",vendor:"Shopify",product:"Vital Shield",variant:"Lemon Lime Greens",units:1,sales:19.99,cost:17.95,totalCost:17.95,profit:2.04}
+  {month:"2026-08",vendor:"Shopify",product:"Intra-Carb",variant:"Strawberry Lemonade",units:2,sales:85.47,cost:10.42,totalCost:20.84,profit:64.63},
+  {month:"2026-08",vendor:"Shopify",product:"GigaBrain",variant:"Blue Crush",units:4,sales:54.71,cost:12.0,totalCost:48.0,profit:6.71},
+  {month:"2026-08",vendor:"Shopify",product:"Vital Shield",variant:"Lemon Lime Greens",units:3,sales:51.97,cost:17.95,totalCost:53.85,profit:-1.88},
+  {month:"2026-08",vendor:"Shopify",product:"Vital Shield",variant:"Very Berry Greens",units:1,sales:19.99,cost:17.95,totalCost:17.95,profit:2.04},
+  {month:"2026-08",vendor:"Shopify",product:"GX Pre-Workout",variant:"Tangerine Blast",units:1,sales:12.74,cost:18.86,totalCost:18.86,profit:-6.12},
+  {month:"2026-08",vendor:"Shopify",product:"Protein Powder",variant:"Peanut Butter",units:0,sales:46.74,cost:17.55,totalCost:0.0,profit:46.74}
 ],
 "2026-01":[
   {month:"2026-01",vendor:"Amazon",product:"Essential Aminos",variant:"Strawberry Lemonade",units:218,sales:6625.02,cost:12.76,totalCost:2781.68,profit:3843.34},
@@ -851,7 +856,7 @@ const priceChanges=[
   {product:"Multi Collagen Peptides",variant:"Unflavored",newPrice:39.99},
 ];
 
-const PLbls=["Jan 10", "Jan 17", "Jan 24", "Feb 3", "Feb 10", "Feb 17", "Feb 24", "Mar 3", "Mar 10", "Mar 17", "Mar 24", "Mar 31", "Apr 7", "Apr 13", "Apr 19", "Apr 26", "May 2", "May 9", "May 16", "May 23", "May 30", "Jun 7", "Jun 14", "Jun 21", "Jun 28", "Jul 4", "Jul 11"];
+const PLbls=["Jan 10", "Jan 17", "Jan 24", "Feb 3", "Feb 10", "Feb 17", "Feb 24", "Mar 3", "Mar 10", "Mar 17", "Mar 24", "Mar 31", "Apr 7", "Apr 13", "Apr 19", "Apr 26", "May 2", "May 9", "May 16", "May 23", "May 30", "Jun 7", "Jun 14", "Jun 21", "Jun 28", "Jul 4", "Jul 11", "Jul 18"];
 const normV=v=>(v==='Default Title'||v==='Single')?'Unflavored':v;
 function ps(l,rows){return rows.map(r=>({'period':l,'platform':r[0],'product':r[1],'variant':normV(r[2]),'units':r[3],'sales':r[4]}));}
 Object.values(monthlyData).forEach(a=>a.forEach(r=>{r.variant=normV(r.variant);}));
@@ -1013,6 +1018,7 @@ const allPS=[
   ...ps("Jun 28",[["Amazon", "Recovery", "Fruit Blast", 159, 9540.0],["Amazon", "HBCD Powder", "Unflavored", 146, 4378.54],["Amazon", "Essential Aminos", "Strawberry Lemonade", 130, 5198.7],["Amazon", "Protein Powder", "Vanilla Ice Cream", 131, 7204.35],["Amazon", "Essential Aminos", "Orange Creamsicle", 127, 3554.73],["Amazon", "Essential Aminos", "Fruit Punch", 114, 4558.86],["Amazon", "Multi Collagen Peptides", "Unflavored", 105, 4198.95],["Amazon", "Intra-Carb", "Fruit Punch", 93, 2759.08],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 88, 2719.12],["Amazon", "Intra-Carb", "Unflavored", 79, 1895.21],["Amazon", "Creatine Monohydrate", "Unflavored", 59, 1297.41],["Amazon", "GX Pre-Workout", "Sour Power", 65, 1299.35],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 54, 2496.46],["Amazon", "Essential Aminos", "Green Apple", 47, 1879.53],["Amazon", "Pristine Omega", "Unflavored", 58, 1191.42],["Amazon", "Vaso Blast", "Cherry Lime", 44, 1979.56],["Amazon", "Thermo Burn+", "Unflavored", 47, 469.53],["Amazon", "Protein Powder", "Blueberry Muffin", 35, 1180.65],["Amazon", "Joint Care", "Unflavored", 33, 1839.67],["Amazon", "Vaso Blast", "Blood Orange", 33, 1484.67],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 31, 1163.94],["Amazon", "GigaBrain", "White Peach", 30, 449.7],["Amazon", "GigaBrain", "Blood Orange", 27, 404.73],["Amazon", "Protein Powder", "Salted Caramel", 27, 1485.0],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 25, 1089.91],["Amazon", "L-Glutamine", "Unflavored", 24, 407.76],["Amazon", "Vital Shield", "Very Berry Greens", 21, 419.79],["Amazon", "Vital Shield", "Lemon Lime Greens", 18, 359.82],["Amazon", "GigaBrain", "Blue Crush", 14, 209.86],["Amazon", "GX Pre-Workout", "Tangerine Blast", 1, 14.99],["Shopify", "Recovery", "Fruit Blast", 89, 4901.88],["Shopify", "Protein Powder", "Vanilla Ice Cream", 46, 2208.11],["Shopify", "Protein Powder", "Salted Caramel", 31, 1608.53],["Shopify", "Vaso Blast", "Cherry Lime", 31, 1181.48],["Shopify", "Multi Collagen Peptides", "Unflavored", 30, 1077.7],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 24, 955.58],["Shopify", "Creatine Monohydrate", "Unflavored", 45, 961.37],["Shopify", "Vaso Blast", "Blood Orange", 23, 877.77],["Shopify", "Joint Care", "Unflavored", 23, 751.77],["Shopify", "Pristine Omega", "Unflavored", 81, 739.68],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 16, 1244.22],["Shopify", "GX Pre-Workout", "Sour Power", 36, 665.59],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 20, 602.3],["Shopify", "Essential Aminos", "Orange Creamsicle", 23, 582.1],["Shopify", "Essential Aminos", "Strawberry Lemonade", 18, 613.13],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 14, 503.36],["Shopify", "HBCD Powder", "Unflavored", 22, 572.81],["Shopify", "Intra-Carb", "Fruit Punch", 16, 457.77],["Shopify", "Essential Aminos", "Fruit Punch", 12, 410.28],["Shopify", "Protein Powder", "Blueberry Muffin", 10, 400.73],["Shopify", "Essential Aminos", "Green Apple", 14, 342.3],["Shopify", "Vital Shield", "Lemon Lime Greens", 16, 312.84],["Shopify", "L-Glutamine", "Unflavored", 16, 242.09],["Shopify", "Vital Shield", "Very Berry Greens", 10, 191.9],["Shopify", "Thermo Burn+", "Unflavored", 18, 170.32],["Shopify", "Intra-Carb", "Unflavored", 7, 151.13],["Shopify", "GigaBrain", "Blood Orange", 9, 111.66],["Shopify", "GigaBrain", "White Peach", 9, 121.44],["Shopify", "GX Pre-Workout", "Tangerine Blast", 7, 99.85],["Shopify", "GigaBrain", "Blue Crush", 7, 93.68]]),
   ...ps("Jul 4",[["Shopify", "Recovery", "Fruit Blast", 81, 4411.62],["Shopify", "Protein Powder", "Vanilla Ice Cream", 45, 2196.96],["Shopify", "Protein Powder", "Salted Caramel", 33, 1707.5],["Shopify", "Vaso Blast", "Cherry Lime", 29, 1091.71],["Shopify", "Multi Collagen Peptides", "Unflavored", 33, 1187.67],["Shopify", "Creatine Monohydrate", "Unflavored", 45, 896.05],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 21, 849.48],["Shopify", "Vaso Blast", "Blood Orange", 22, 829.78],["Shopify", "GX Pre-Workout", "Sour Power", 41, 755.54],["Shopify", "Pristine Omega", "Unflavored", 72, 656.27],["Shopify", "Essential Aminos", "Fruit Punch", 19, 678.11],["Shopify", "Intra-Carb", "Fruit Punch", 21, 605.79],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 13, 1150.19],["Shopify", "Joint Care", "Unflavored", 18, 563.82],["Shopify", "Essential Aminos", "Orange Creamsicle", 23, 586.3],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 15, 501.35],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 10, 412.52],["Shopify", "HBCD Powder", "Unflavored", 17, 433.36],["Shopify", "Protein Powder", "Blueberry Muffin", 10, 463.13],["Shopify", "Essential Aminos", "Green Apple", 12, 291.92],["Shopify", "Essential Aminos", "Strawberry Lemonade", 9, 305.81],["Shopify", "Vital Shield", "Very Berry Greens", 13, 251.87],["Shopify", "L-Glutamine", "Unflavored", 15, 225.1],["Shopify", "Recovery", "Rainbow Candy", 3, 179.97],["Shopify", "Vital Shield", "Lemon Lime Greens", 9, 172.91],["Shopify", "Thermo Burn+", "Unflavored", 17, 157.33],["Shopify", "Intra-Carb", "Unflavored", 7, 146.33],["Shopify", "GigaBrain", "Blood Orange", 10, 120.65],["Shopify", "GigaBrain", "White Peach", 8, 110.92],["Shopify", "GigaBrain", "Blue Crush", 7, 93.68],["Shopify", "GX Pre-Workout", "Tangerine Blast", 2, 29.98],["Amazon", "Recovery", "Fruit Blast", 181, 10860.0],["Amazon", "HBCD Powder", "Unflavored", 149, 4468.51],["Amazon", "Protein Powder", "Vanilla Ice Cream", 152, 8358.92],["Amazon", "Essential Aminos", "Strawberry Lemonade", 143, 5718.57],["Amazon", "Essential Aminos", "Orange Creamsicle", 126, 3526.74],["Amazon", "Essential Aminos", "Fruit Punch", 110, 4398.9],["Amazon", "Multi Collagen Peptides", "Unflavored", 107, 4278.93],["Amazon", "Intra-Carb", "Fruit Punch", 88, 2609.13],["Amazon", "Intra-Carb", "Unflavored", 84, 2015.16],["Amazon", "GX Pre-Workout", "Sour Power", 81, 1619.19],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 63, 2009.37],["Amazon", "Pristine Omega", "Unflavored", 64, 1407.36],["Amazon", "Creatine Monohydrate", "Unflavored", 52, 1143.48],["Amazon", "Essential Aminos", "Green Apple", 49, 1959.51],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 51, 2458.49],["Amazon", "Thermo Burn+", "Unflavored", 54, 539.46],["Amazon", "Protein Powder", "Salted Caramel", 40, 2199.77],["Amazon", "Vaso Blast", "Cherry Lime", 39, 1754.61],["Amazon", "Joint Care", "Unflavored", 34, 2039.66],["Amazon", "Vaso Blast", "Blood Orange", 28, 1259.72],["Amazon", "GigaBrain", "White Peach", 29, 434.71],["Amazon", "GigaBrain", "Blood Orange", 27, 404.73],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 27, 1229.85],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 23, 889.93],["Amazon", "L-Glutamine", "Unflavored", 24, 407.76],["Amazon", "Protein Powder", "Blueberry Muffin", 23, 784.77],["Amazon", "Vital Shield", "Very Berry Greens", 21, 419.79],["Amazon", "Vital Shield", "Lemon Lime Greens", 21, 419.79],["Amazon", "GigaBrain", "Blue Crush", 13, 194.87]]),
   ...ps("Jul 11",[["Amazon", "Recovery", "Fruit Blast", 162, 9720],["Amazon", "Protein Powder", "Vanilla Ice Cream", 153, 8413.58],["Amazon", "HBCD Powder", "Unflavored", 149, 4468.51],["Amazon", "Essential Aminos", "Strawberry Lemonade", 136, 5438.64],["Amazon", "Essential Aminos", "Orange Creamsicle", 126, 3526.74],["Amazon", "Essential Aminos", "Fruit Punch", 104, 4158.96],["Amazon", "Multi Collagen Peptides", "Unflavored", 103, 4118.97],["Amazon", "Intra-Carb", "Unflavored", 91, 2183.09],["Amazon", "Intra-Carb", "Fruit Punch", 88, 2609.13],["Amazon", "GX Pre-Workout", "Sour Power", 72, 1439.28],["Amazon", "Pristine Omega", "Unflavored", 69, 1517.31],["Amazon", "Creatine Monohydrate", "Unflavored", 56, 1231.44],["Amazon", "Essential Aminos", "Green Apple", 52, 2079.48],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 51, 2521.49],["Amazon", "Vaso Blast", "Cherry Lime", 40, 1799.6],["Amazon", "Thermo Burn+", "Unflavored", 45, 449.55],["Amazon", "Protein Powder", "Salted Caramel", 33, 1759.69],["Amazon", "Joint Care", "Unflavored", 29, 1739.71],["Amazon", "Vaso Blast", "Blood Orange", 28, 1259.72],["Amazon", "GigaBrain", "White Peach", 31, 464.69],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 26, 1259.78],["Amazon", "GigaBrain", "Blood Orange", 26, 389.74],["Amazon", "L-Glutamine", "Unflavored", 25, 424.75],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 22, 779.78],["Amazon", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 20, 865.87],["Amazon", "Vital Shield", "Very Berry Greens", 19, 379.81],["Amazon", "Protein Powder", "Blueberry Muffin", 17, 646.83],["Amazon", "Vital Shield", "Lemon Lime Greens", 15, 299.85],["Amazon", "GigaBrain", "Blue Crush", 12, 179.88],["Shopify", "Recovery", "Fruit Blast", 75, 4060.08],["Shopify", "Protein Powder", "Vanilla Ice Cream", 45, 2213.34],["Shopify", "Protein Powder", "Salted Caramel", 31, 1597.49],["Shopify", "Vaso Blast", "Cherry Lime", 31, 1163.69],["Shopify", "Multi Collagen Peptides", "Unflavored", 35, 1265.65],["Shopify", "Creatine Monohydrate", "Unflavored", 39, 828.99],["Shopify", "GX Pre-Workout", "Sour Power", 43, 785.33],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Vanilla Ice Cream", 16, 987.11],["Shopify", "Recovery", "Rainbow Candy", 13, 707.87],["Shopify", "Vaso Blast", "Blood Orange", 21, 797.79],["Shopify", "Pristine Omega", "Unflavored", 76, 685.23],["Shopify", "Joint Care", "Unflavored", 20, 659.8],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Chocolate", 17, 738.65],["Shopify", "Essential Aminos", "Fruit Punch", 18, 678.11],["Shopify", "Intra-Carb", "Fruit Punch", 20, 569.8],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Cinnamon Cereal", 13, 499.37],["Shopify", "The Meadows Whey: Premium Whey Isolate Protein", "Fresh Strawberry", 11, 474.65],["Shopify", "HBCD Powder", "Unflavored", 18, 463.32],["Shopify", "Essential Aminos", "Orange Creamsicle", 19, 480.65],["Shopify", "Essential Aminos", "Strawberry Lemonade", 13, 427.37],["Shopify", "Protein Powder", "Blueberry Muffin", 7, 429.66],["Shopify", "Essential Aminos", "Green Apple", 13, 313.47],["Shopify", "L-Glutamine", "Unflavored", 17, 263.33],["Shopify", "Intra-Carb", "Unflavored", 9, 194.31],["Shopify", "Vital Shield", "Very Berry Greens", 10, 195.9],["Shopify", "GigaBrain", "Blood Orange", 11, 135.64],["Shopify", "Vital Shield", "Lemon Lime Greens", 7, 136.93],["Shopify", "Thermo Burn+", "Unflavored", 13, 117.37],["Shopify", "GigaBrain", "White Peach", 8, 107.92],["Shopify", "GigaBrain", "Blue Crush", 7, 91.43],["Shopify", "Protein Powder", "Peanut Butter", 0, 46.74],["Shopify", "Intra-Carb", "Strawberry Lemonade", 0, 29.99]]),
+...ps("Jul 18",[["Amazon","Recovery","Fruit Blast",172,10320.0],["Amazon","Protein Powder","Vanilla Ice Cream",172,9458.28],["Amazon","HBCD Powder","Unflavored",155,4648.45],["Amazon","Essential Aminos","Strawberry Lemonade",135,5398.65],["Amazon","Essential Aminos","Fruit Punch",124,4958.76],["Amazon","Essential Aminos","Orange Creamsicle",118,3302.82],["Amazon","Intra-Carb","Unflavored",102,2446.98],["Amazon","Multi Collagen Peptides","Unflavored",108,4318.92],["Amazon","Intra-Carb","Fruit Punch",91,2699.1],["Amazon","Creatine Monohydrate","Unflavored",61,1341.39],["Amazon","Pristine Omega","Unflavored",71,1561.29],["Amazon","Essential Aminos","Green Apple",54,2159.46],["Amazon","GX Pre-Workout","Sour Power",65,1299.35],["Amazon","Protein Powder","Salted Caramel",52,2804.49],["Amazon","The Meadows Whey: Premium Whey Isolate Protein","Chocolate",51,2549.49],["Amazon","Vaso Blast","Cherry Lime",43,1934.57],["Amazon","Vaso Blast","Blood Orange",35,1529.66],["Amazon","The Meadows Whey: Premium Whey Isolate Protein","Vanilla Ice Cream",31,1549.69],["Amazon","Joint Care","Unflavored",31,1859.69],["Amazon","Thermo Burn+","Unflavored",32,319.68],["Amazon","GigaBrain","White Peach",29,434.71],["Amazon","GigaBrain","Blood Orange",27,404.73],["Amazon","L-Glutamine","Unflavored",26,441.74],["Amazon","Vital Shield","Very Berry Greens",21,419.79],["Amazon","The Meadows Whey: Premium Whey Isolate Protein","Fresh Strawberry",21,1049.79],["Amazon","Vital Shield","Lemon Lime Greens",16,319.84],["Amazon","GigaBrain","Blue Crush",11,164.89],["Amazon","The Meadows Whey: Premium Whey Isolate Protein","Cinnamon Cereal",7,349.93],["Amazon","Protein Powder","Blueberry Muffin",5,274.95],["Shopify","Recovery","Fruit Blast",68,3667.08],["Shopify","Protein Powder","Vanilla Ice Cream",46,2265.54],["Shopify","Vaso Blast","Cherry Lime",38,1433.62],["Shopify","Recovery","Rainbow Candy",22,1196.78],["Shopify","Protein Powder","Salted Caramel",27,1429.73],["Shopify","Multi Collagen Peptides","Unflavored",36,1297.64],["Shopify","Creatine Monohydrate","Unflavored",44,931.24],["Shopify","Pristine Omega","Unflavored",90,815.59],["Shopify","Joint Care","Unflavored",24,799.76],["Shopify","Vaso Blast","Blood Orange",23,865.77],["Shopify","The Meadows Whey: Premium Whey Isolate Protein","Vanilla Ice Cream",17,1027.1],["Shopify","GX Pre-Workout","Sour Power",43,782.33],["Shopify","The Meadows Whey: Premium Whey Isolate Protein","Chocolate",18,799.82],["Shopify","Essential Aminos","Fruit Punch",20,738.89],["Shopify","The Meadows Whey: Premium Whey Isolate Protein","Fresh Strawberry",13,593.32],["Shopify","Essential Aminos","Orange Creamsicle",20,507.24],["Shopify","Essential Aminos","Green Apple",18,454.82],["Shopify","Intra-Carb","Fruit Punch",16,445.34],["Shopify","HBCD Powder","Unflavored",17,443.83],["Shopify","The Meadows Whey: Premium Whey Isolate Protein","Cinnamon Cereal",9,399.91],["Shopify","Essential Aminos","Strawberry Lemonade",13,433.07],["Shopify","Protein Powder","Blueberry Muffin",6,343.68],["Shopify","Intra-Carb","Unflavored",9,194.31],["Shopify","GigaBrain","Blood Orange",13,168.62],["Shopify","Vital Shield","Very Berry Greens",9,179.91],["Shopify","GigaBrain","White Peach",12,167.88],["Shopify","L-Glutamine","Unflavored",11,165.64],["Shopify","Thermo Burn+","Unflavored",15,137.35],["Shopify","Vital Shield","Lemon Lime Greens",7,131.93],["Shopify","GigaBrain","Blue Crush",7,96.68],["Shopify","Intra-Carb","Strawberry Lemonade",2,85.47],["Shopify","GX Pre-Workout","Tangerine Blast",1,12.74],["Shopify","Protein Powder","Peanut Butter",0,46.74]]),
 ]
 
 
@@ -1234,7 +1240,7 @@ function renderPeriods(){
   // Table — show only the 8 most recent periods for readability
   const tblPeriods=PLbls.slice(-8);
   // Full date range labels for each period label
-  const periodRanges={"Jan 10":"Jan 10–Feb 10","Jan 17":"Jan 17–Feb 17","Jan 24":"Jan 24–Feb 24","Feb 3":"Feb 3–Mar 3","Feb 10":"Feb 10–Mar 10","Feb 17":"Feb 17–Mar 17","Feb 24":"Feb 24–Mar 24","Mar 3":"Mar 3–Apr 3","Mar 10":"Mar 10–Apr 10","Mar 17":"Mar 17–Apr 17","Mar 24":"Mar 24–Apr 24","Mar 31":"Mar 31–Apr 30","Apr 7":"Apr 7–May 7","Apr 13":"Apr 13–May 13","Apr 19":"Apr 19–May 19","Apr 26":"Apr 26–May 26","May 2":"May 2–Jun 2","May 9":"May 9–Jun 9","May 16":"May 16–Jun 16","May 23":"May 23–Jun 23","May 30":"May 30–Jun 30","Jun 7":"Jun 7–Jul 7","Jun 14":"Jun 14–Jul 14","Jun 21":"Jun 21–Jul 21","Jun 28":"Jun 28–Jul 28","Jul 4":"Jul 4–Aug 4","Jul 11":"Jul 11–Aug 11"};
+  const periodRanges={"Jan 10":"Jan 10–Feb 10","Jan 17":"Jan 17–Feb 17","Jan 24":"Jan 24–Feb 24","Feb 3":"Feb 3–Mar 3","Feb 10":"Feb 10–Mar 10","Feb 17":"Feb 17–Mar 17","Feb 24":"Feb 24–Mar 24","Mar 3":"Mar 3–Apr 3","Mar 10":"Mar 10–Apr 10","Mar 17":"Mar 17–Apr 17","Mar 24":"Mar 24–Apr 24","Mar 31":"Mar 31–Apr 30","Apr 7":"Apr 7–May 7","Apr 13":"Apr 13–May 13","Apr 19":"Apr 19–May 19","Apr 26":"Apr 26–May 26","May 2":"May 2–Jun 2","May 9":"May 9–Jun 9","May 16":"May 16–Jun 16","May 23":"May 23–Jun 23","May 30":"May 30–Jun 30","Jun 7":"Jun 7–Jul 7","Jun 14":"Jun 14–Jul 14","Jun 21":"Jun 21–Jul 21","Jun 28":"Jun 28–Jul 28","Jul 4":"Jul 4–Aug 4","Jul 11":"Jul 11–Aug 11","Jul 18":"Jul 18–Aug 18"};
   const tp=[...new Set(allPS.filter(flt).map(r=>r.product+'|'+r.variant))].slice(0,35);
   document.getElementById('pt-head').innerHTML='<th>SKU</th>'+tblPeriods.map(l=>{const hi=l===sel;const rng=periodRanges[l]||l;const [s,e]=rng.split('–');return`<th style="text-align:right;white-space:nowrap;${hi?'color:#ff8080;font-weight:700;':''}" title="${rng}">${s}<br><span style="font-size:9px;font-weight:400;color:${hi?'#ff6060':'var(--text3)'}">–${e||''}</span></th>`;}).join('');
   const ptb=document.getElementById('pt-body');ptb.innerHTML='';
@@ -1307,7 +1313,7 @@ function buildInvTable(){
   };
 
   // Build velocity from the 2 most recent 30-day periods (sum both platforms)
-  const recentPeriods=['Jul 4','Jul 11'];
+  const recentPeriods=['Jul 11','Jul 18'];
   const vel={};
   recentPeriods.forEach(p=>{
     allPS.filter(r=>r.period===p).forEach(r=>{
@@ -1327,7 +1333,7 @@ function buildInvTable(){
     return total>0?parseFloat((total/30).toFixed(2)):0;
   }
 
-  const today=new Date('2026-08-11');
+  const today=new Date('2026-08-18');
   const tbody=document.getElementById('inv-body');tbody.innerHTML='';
   inventoryData.forEach(item=>{
     const tot=item.midwest+item.amazon;
