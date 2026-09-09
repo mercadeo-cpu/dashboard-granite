@@ -929,7 +929,7 @@ const priceChanges=[
 ];
 
 const PLbls=["Jan 10", "Jan 17", "Jan 24", "Feb 3", "Feb 10", "Feb 17", "Feb 24", "Mar 3", "Mar 10", "Mar 17", "Mar 24", "Mar 31", "Apr 7", "Apr 13", "Apr 19", "Apr 26", "May 2", "May 9", "May 16", "May 23", "May 30", "Jun 7", "Jun 14", "Jun 21", "Jun 28", "Jul 4", "Jul 11", "Jul 18", "Jul 25", "Aug 1", "Aug 8"];
-const normV=v=>(v==='Default Title'||v==='Single')?'Unflavored':(v==='Rich Chocolate'?'Chocolate':v);
+const normV=v=>(v==='Default Title'||v==='Single')?'Unflavored':(v==='Rich Chocolate'?'Chocolate':(v==='Vanilla'?'Vanilla Ice Cream':v));
 function ps(l,rows){return rows.map(r=>({'period':l,'platform':r[0],'product':r[1],'variant':normV(r[2]),'units':r[3],'sales':r[4]}));}
 Object.values(monthlyData).forEach(a=>a.forEach(r=>{r.variant=normV(r.variant);}));
 
